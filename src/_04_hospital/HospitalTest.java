@@ -23,14 +23,14 @@ public class HospitalTest extends TestCase {
 		testHospital.addDoctor(new GeneralPractitioner());
 		testHospital.addDoctor(new GeneralPractitioner());
 		testHospital.addDoctor(new Surgeon());
-		assertEquals(3, testHospital.getDoctors().size());
+		assertEquals(3, testHospital.getDoctor().size());
 	}
 
 	public void testAddPatient() throws Exception {
 		testHospital.addPatient(new Patient());
 		testHospital.addPatient(new Patient());
 		testHospital.addPatient(new Patient());
-		assertEquals(3, testHospital.getPatients().size());
+		assertEquals(3, testHospital.getpatients().size());
 	}
 
 	/* Fix asserts one at a time */
@@ -103,7 +103,7 @@ assertTrue(testDoctor.getPatients().size() == 3);
 		// hospital assigns patients to doctors
 		testHospital.assignPatientsToDoctors();
 		// hospital.getDoctors shows doctors have 3, 3, 2 patients
-		List<Doctor> testDoctors = testHospital.getDoctors();
+		List<Doctor> testDoctors = testHospital.getDoctor();
 		assertEquals(3, testDoctors.get(0).getPatients().size());
 		assertEquals(3, testDoctors.get(1).getPatients().size());
 		assertEquals(2, testDoctors.get(2).getPatients().size());
