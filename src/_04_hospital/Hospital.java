@@ -8,29 +8,33 @@ public class Hospital {
 
 	public void addDoctor(Doctor doctor) {
 		doc.add(doctor);
+	
 	}
-	public ArrayList<Doctor> getDoctor(){
+
+	public ArrayList<Doctor> getDoctor() {
 		return doc;
 	}
-	
+
 	public void addPatient(Patient p) {
 		patients.add(p);
 	}
-	public ArrayList<Patient> getpatients(){
+
+	public ArrayList<Patient> getpatients() {
 		return patients;
 	}
 
 	public void assignPatientsToDoctors() {
-				int count = 0;
-				for(int i = 0; i < patients.size(); i++) {
-					try {
-						doc.get(count).assignPatient(patients.get(i));
-					} catch (DoctorFullException dfe) {
-						// TODO: handle exception
-					count++;
-					i--;
-					}
-				}
+		int count = 0;
+		
+		for (int i = 0; i < patients.size(); i++) {
+			try {
+				doc.get(count).assignPatient(patients.get(i));
+			} catch (DoctorFullException dfe) {
+				// TODO: handle exception
+				count++;
+				i--;
+			}
+			
+		}
 	}
 }
-

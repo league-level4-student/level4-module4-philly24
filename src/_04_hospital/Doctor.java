@@ -21,12 +21,13 @@ public class Doctor {
 		}
 	}
 
-	ArrayList<Patient> getPatients(){
+	ArrayList<Patient> getPatients() {
 		return patients2;
 	}
-void doMedicine() {
-	for (Patient patients : patients2) {
-		patients.cared = true;
+
+	void doMedicine() {
+		for (Patient patients : patients2) {
+			patients.cared = true;
+		}
 	}
-}
 }

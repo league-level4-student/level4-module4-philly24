@@ -1,7 +1,7 @@
 package _04_hospital;
 
 public class Surgeon extends Doctor {
-	boolean perfromsSurgery() {
+	boolean performsSurgery() {
 		return true;
 	}
 }
